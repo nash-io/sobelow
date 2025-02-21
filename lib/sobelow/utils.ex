@@ -94,10 +94,9 @@ defmodule Sobelow.Utils do
   end
 
   defp extract_app_name(ast, acc) do
-    if Keyword.keyword?(ast) && Keyword.get(ast, :app) do
-      {ast, Keyword.get(ast, :app)}
-    else
-      {ast, acc}
+    case ast do
+      {:app, app_name} -> {ast, app_name}
+      _ -> {ast, acc}
     end
   end
 
