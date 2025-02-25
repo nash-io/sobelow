@@ -8,12 +8,9 @@ defmodule Sobelow do
   @vsncheck "sobelow-vsn-check"
   @skips ".sobelow-skips"
   @submodules [
-    Sobelow.XSS,
     Sobelow.SQL,
-    Sobelow.Traversal,
     Sobelow.RCE,
     Sobelow.Misc,
-    Sobelow.Config,
     Sobelow.CI,
     Sobelow.DOS,
     Sobelow.Vuln
